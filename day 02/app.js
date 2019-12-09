@@ -28,7 +28,7 @@ submitButton.addEventListener("click", () => {
 	program[1] = 12;
 	program[2] = 2;
 
-	let result = restoreGreavityAssistProgram(program);
+	let result = restoreGravityAssistProgram(program);
 
 	resultText.innerHTML = result[0];
 });
@@ -45,7 +45,7 @@ submitButton2.addEventListener("click", () => {
             // Compute result for (noun, verb) pair
             program[1] = noun;
             program[2] = verb;
-			let result = restoreGreavityAssistProgram(program);
+			let result = restoreGravityAssistProgram(program);
 
 			if (result[0] === desiredOutput) {
 				resultText2.innerHTML = 100 * noun + verb;
@@ -55,7 +55,7 @@ submitButton2.addEventListener("click", () => {
 	}
 });
 
-restoreGreavityAssistProgram = program => {
+function restoreGravityAssistProgram(program) {
 	let i;
 
 	for (i = 0; i < program.length; i += 4) {
